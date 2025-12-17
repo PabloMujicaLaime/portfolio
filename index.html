@@ -36,6 +36,56 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    /* Estilo para los Tags / Badges */
+    .tag {
+      background-color: #f0f4f8;
+      color: #475569;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s;
+    }
+
+    .tag:hover {
+      background-color: #e2e8f0;
+      color: #1e293b;
+    }
+
+    /* Badge suave para el cargo */
+    .bg-primary-soft {
+      background-color: #e0e7ff;
+      color: #4338ca;
+    }
+
+    /* Lista personalizada con iconos */
+    .custom-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #4b5563;
+    }
+
+    .custom-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #0d6efd;
+      font-weight: bold;
+    }
+
+    /* Ajustes de bordes y sombras */
+    .modal-content {
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .modal-header-clean {
+      border-bottom: 1px solid #f1f5f9;
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -71,7 +121,7 @@
             <h2>Pablo Alexander Mujica</h2>
             <p>Soy
               <span class="typed"
-                data-typed-items="Desarrollador Full Stack, Analista de Sistemas, Especialista en Inteligencia Artificial, Diseñador, Analista de Inteligencia de Mercado">
+                data-typed-items="Desarrollador Full Stack, Analista de Sistemas, Especialista en Inteligencia Artificial, Diseñador">
                 Desarrollador Full Stack
               </span>
               <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
@@ -100,7 +150,7 @@
         <h2>Sobre mí</h2>
         <p>
           Ingeniero de Sistemas con experiencia en desarrollo Full Stack, análisis de sistemas,
-          inteligencia artificial, diseño y análisis de mercado. He trabajado en proyectos educativos,
+          inteligencia artificial, diseño. He trabajado en proyectos educativos,
           médicos, administrativos y comerciales, aportando soluciones tecnológicas escalables y de alto impacto.
           Me caracteriza la proactividad, el pensamiento analítico y la capacidad de adaptación en entornos
           dinámicos.
@@ -424,8 +474,109 @@
               <div class="portfolio-info">
                 <h4>Open Teleradiology</h4>
                 <p>Plataforma web de teleradiología profesional</p>
+                <button type="button" class="btn btn-sm btn-primary me-2 btn-abrir-modal"
+                  data-target="#modalOpenTeleradiology">
+                  Ver Más
+                </button>
                 <a href="https://openteleradiology.com/" target="_blank" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+
+            <div class="modal fade" id="modalOpenTeleradiology" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 shadow-lg">
+
+                  <div class="modal-header bg-light border-0 py-4 px-4">
+                    <div>
+                      <h4 class="modal-title fw-bold text-dark mb-0">Open Teleradiology LLC</h4>
+                      <div class="d-flex align-items-center mt-1">
+                        <span class="badge bg-primary-soft text-primary me-2">Fullstack Software Developer</span>
+                        <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>Remoto (USA/Bolivia)</small>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body p-4">
+                    <p class="lead text-secondary mb-4">
+                      Plataforma de teleradiología de alto rendimiento para diagnósticos médicos, diseñada bajo
+                      estándares clínicos profesionales y flujos de trabajo de alta demanda.
+                    </p>
+
+                    <div class="row g-4">
+                      <div class="col-md-7">
+                        <h6 class="text-uppercase fw-bold text-primary small mb-3">Responsabilidades y Desarrollo</h6>
+                        <ul class="list-unstyled custom-list">
+                          <li>Análisis y diseño de arquitectura mediante <strong>UML</strong> y prototipos en
+                            <strong>Figma</strong>.
+                          </li>
+                          <li>Desarrollo integral <strong>Fullstack</strong> (Vue.js / NestJS) con metodología
+                            Scrum/Kanban.</li>
+                          <li>Implementación de visor médico <strong>DICOM</strong> con
+                            <strong>cornerstone-core</strong>.
+                          </li>
+                          <li><strong>Seguridad Crítica:</strong> Cifrado de archivos médicos mediante
+                            <strong>AES-256-CBC</strong>.
+                          </li>
+                          <li>Desarrollo de <strong>API RESTful</strong> escalable y autenticación <strong>JWT</strong>.
+                          </li>
+                          <li>Despliegue modular en producción usando <strong>Docker</strong> y servidores
+                            <strong>Ubuntu/Linux</strong>.
+                          </li>
+                          <li>Gestión de infraestructura: DNS, Certificados <strong>SSL</strong>, Nginx y PM2.</li>
+                          <li>Integración de pagos con <strong>PayPal SDK</strong> y almacenamiento en
+                            <strong>Cloudinary</strong>.
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-5">
+                        <h6 class="text-uppercase fw-bold text-primary small mb-3">Stack Tecnológico</h6>
+
+                        <div class="mb-3">
+                          <small class="text-muted d-block mb-2 fw-semibold">Frontend & Backend</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">NestJS</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">TypeORM</span>
+                          </div>
+                        </div>
+
+                        <div class="mb-3">
+                          <small class="text-muted d-block mb-2 fw-semibold">Seguridad & Médica</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">AES-256</span>
+                            <span class="tag">DICOM</span>
+                            <span class="tag">CornerstoneJS</span>
+                          </div>
+                        </div>
+
+                        <div>
+                          <small class="text-muted d-block mb-2 fw-semibold">DevOps & Cloud</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">Docker</span>
+                            <span class="tag">Nginx</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">PayPal SDK</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer border-0 p-4 bg-light">
+                    <button class="btn btn-link text-muted text-decoration-none me-auto"
+                      data-bs-dismiss="modal">Cerrar</button>
+                    <a href="https://openteleradiology.com/" target="_blank" class="btn btn-primary px-4 shadow-sm">
+                      Visitar Sitio Web <i class="bi bi-arrow-up-right-square ms-1"></i>
+                    </a>
+                  </div>
+
+                </div>
               </div>
             </div>
 
@@ -435,8 +586,85 @@
               <div class="portfolio-info">
                 <h4>Open Teleradiology App</h4>
                 <p>Aplicación móvil oficial para radiólogos</p>
+                <button type="button" class="btn btn-sm btn-primary me-2 btn-abrir-modal"
+                  data-target="#modalOpenTeleradiologyApp">
+                  Ver Más
+                </button>
                 <a href="https://play.google.com/store/apps/details?id=com.opentnetwork.openTeleradiology"
                   target="_blank" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+
+            <div class="modal fade" id="modalOpenTeleradiologyApp" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 shadow-lg">
+
+                  <div class="modal-header bg-light border-0 py-4 px-4">
+                    <div>
+                      <h4 class="modal-title fw-bold text-dark mb-0">Open Teleradiology Mobile</h4>
+                      <div class="d-flex align-items-center mt-1">
+                        <span class="badge bg-primary-soft text-primary me-2">Flutter Developer</span>
+                        <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>Remoto (USA/Bolivia)</small>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body p-4">
+                    <p class="lead text-secondary mb-4">
+                      Aplicación móvil oficial diseñada para que los radiólogos gestionen estudios, consulten ingresos y
+                      reciban notificaciones críticas en tiempo real.
+                    </p>
+
+                    <div class="row g-4">
+                      <div class="col-md-6">
+                        <h6 class="text-uppercase fw-bold text-primary small mb-3">Responsabilidades y Desarrollo</h6>
+                        <ul class="list-unstyled custom-list">
+                          <li>Desarrollo integral con Flutter y Dart.</li>
+                          <li>Integración de API REST para gestión de estudios.</li>
+                          <li>Implementación de notificaciones Push (FCM).</li>
+                          <li>Gestión de estado modular con Riverpod.</li>
+                          <li>Configuración y despliegue en Google Play Store.</li>
+                          <li>Manejo de seguridad y tokens con Dio.</li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-6">
+                        <h6 class="text-uppercase fw-bold text-primary small mb-3">Tecnologías Móviles</h6>
+
+                        <div class="mb-3">
+                          <small class="text-muted d-block mb-2 fw-semibold">Framework & Lenguaje</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">Riverpod</span>
+                          </div>
+                        </div>
+
+                        <div>
+                          <small class="text-muted d-block mb-2 fw-semibold">Servicios & Herramientas</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">Firebase (FCM)</span>
+                            <span class="tag">Dio (HTTP)</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">Google Play Console</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer border-0 p-4 bg-light">
+                    <button class="btn btn-link text-muted text-decoration-none me-auto"
+                      data-bs-dismiss="modal">Cerrar</button>
+                    <a href="https://play.google.com/store/apps/details?id=com.opentnetwork.openTeleradiology"
+                      target="_blank" class="btn btn-primary px-4 shadow-sm">
+                      Ver en Play Store <i class="bi bi-google-play ms-1"></i>
+                    </a>
+                  </div>
+
+                </div>
               </div>
             </div>
 
@@ -445,10 +673,95 @@
               <img src="assets\img\img3.png" class="img-fluid" alt="Oleveda">
               <div class="portfolio-info">
                 <h4>Oleveda</h4>
-                <p>Plataforma de educación para profesionales del área médica</p>
+                <p>Educación para profesionales médicos</p>
+                <button type="button" class="btn btn-sm btn-primary me-2 btn-abrir-modal" data-target="#modalOleveda">
+                  Ver Más
+                </button>
                 <a href="https://oleveda.com/" target="_blank" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
+
+            <div class="modal fade" id="modalOleveda" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 shadow-lg">
+
+                  <div class="modal-header bg-light border-0 py-4 px-4">
+                    <div>
+                      <h4 class="modal-title fw-bold text-dark mb-0">Oleveda</h4>
+                      <div class="d-flex align-items-center mt-1">
+                        <span class="badge bg-primary-soft text-primary me-2">Fullstack & DevOps Engineer</span>
+                        <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>Remoto (USA/Bolivia)</small>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body p-4">
+                    <p class="lead text-secondary mb-4">
+                      Plataforma integral de educación médica diseñada para la gestión de cursos, certificaciones y
+                      flujos de pago seguros para profesionales del sector salud.
+                    </p>
+
+                    <div class="row g-4">
+                      <div class="col-md-7">
+                        <h6 class="text-uppercase fw-bold text-primary small mb-3">Responsabilidades Clave</h6>
+                        <ul class="list-unstyled custom-list">
+                          <li>Arquitectura de software con <strong>UML</strong> y metodologías ágiles.</li>
+                          <li>Desarrollo Front-End reactivo con <strong>Vue.js</strong> y Vuetify.</li>
+                          <li>Backend escalable con <strong>NestJS</strong> y autenticación JWT.</li>
+                          <li>Pasarela de pagos con <strong>PayPal SDK</strong> y notificaciones Push.</li>
+                          <li>Despliegue modular con <strong>Docker</strong> y gestión de VPS (Ubuntu).</li>
+                          <li>Configuración de seguridad (SSL, Nginx) y monitoreo con PM2.</li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-5">
+                        <h6 class="text-uppercase fw-bold text-primary small mb-3">Stack Tecnológico</h6>
+
+                        <div class="mb-3">
+                          <small class="text-muted d-block mb-2 fw-semibold">Frontend & Backend</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">NestJS</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">PostgreSQL</span>
+                          </div>
+                        </div>
+
+                        <div class="mb-3">
+                          <small class="text-muted d-block mb-2 fw-semibold">Infraestructura & Integraciones</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">Docker</span>
+                            <span class="tag">Nginx</span>
+                            <span class="tag">PayPal</span>
+                            <span class="tag">Cloudinary</span>
+                          </div>
+                        </div>
+
+                        <div>
+                          <small class="text-muted d-block mb-2 fw-semibold">Otros</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">UML</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer border-0 p-4 bg-light">
+                    <button class="btn btn-link text-muted text-decoration-none me-auto"
+                      data-bs-dismiss="modal">Cerrar</button>
+                    <a href="https://oleveda.com/" target="_blank" class="btn btn-primary px-4 shadow-sm">
+                      Visitar Plataforma <i class="bi bi-arrow-up-right-square ms-1"></i>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
 
             <!-- YATIC (AGETIC) Web -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
@@ -456,8 +769,91 @@
               <div class="portfolio-info">
                 <h4>YATIC (AGETIC)</h4>
                 <p>Plataforma gubernamental de gestión tecnológica</p>
+                <button type="button" class="btn btn-sm btn-primary me-2 btn-abrir-modal" data-target="#modalYatic">
+                  Ver Más
+                </button>
                 <a href="https://yatic.agetic.gob.bo/portal" target="_blank" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+
+            <div class="modal fade" id="modalYatic" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 shadow-lg">
+
+                  <div class="modal-header bg-light border-0 py-4 px-4">
+                    <div>
+                      <h4 class="modal-title fw-bold text-dark mb-0">YATIC – AGETIC</h4>
+                      <div class="d-flex align-items-center mt-1">
+                        <span class="badge bg-primary-soft text-primary me-2">Software Analyst & Developer</span>
+                        <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>La Paz - Bolivia</small>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body p-4">
+                    <p class="lead text-secondary mb-4">
+                      Colaboración técnica en el análisis, diseño y desarrollo de sistemas críticos para el Estado,
+                      incluyendo el Sistema de Seguimiento Académico y soporte en plataformas nacionales.
+                    </p>
+
+                    <div class="row g-4">
+                      <div class="col-md-7">
+                        <h6 class="text-uppercase fw-bold text-primary small mb-3">Contribuciones y Experiencia</h6>
+                        <ul class="list-unstyled custom-list">
+                          <li>Análisis y diseño mediante <strong>Modelado UML</strong> y prototipado en Figma.</li>
+                          <li>Desarrollo completo del <strong>Sistema de Seguimiento Académico</strong>.</li>
+                          <li>Ejecución de <strong>pruebas QA</strong>: unitarias, integración y aceptación.</li>
+                          <li>Desarrollo Back-End con <strong>NestJS</strong> y seguridad mediante JWT.</li>
+                          <li>Implementación de interfaces modernas con <strong>Vue.js y React.js</strong>.</li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-5">
+                        <h6 class="text-uppercase fw-bold text-primary small mb-3">Stack Tecnológico</h6>
+
+                        <div class="mb-3">
+                          <small class="text-muted d-block mb-2 fw-semibold">Frontend</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">React.js</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Vuetify</span>
+                          </div>
+                        </div>
+
+                        <div class="mb-3">
+                          <small class="text-muted d-block mb-2 fw-semibold">Backend & Data</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">NestJS</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">TypeORM</span>
+                          </div>
+                        </div>
+
+                        <div>
+                          <small class="text-muted d-block mb-2 fw-semibold">Metodologías</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">Scrum</span>
+                            <span class="tag">Kanban</span>
+                            <span class="tag">UML</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer border-0 p-4 bg-light">
+                    <button class="btn btn-link text-muted text-decoration-none me-auto"
+                      data-bs-dismiss="modal">Cerrar</button>
+                    <a href="https://yatic.agetic.gob.bo/portal" target="_blank" class="btn btn-primary px-4 shadow-sm">
+                      Ver Portal Oficial <i class="bi bi-arrow-up-right-square ms-1"></i>
+                    </a>
+                  </div>
+
+                </div>
               </div>
             </div>
 
@@ -466,7 +862,92 @@
               <img src="assets\img\img6.png" class="img-fluid" alt="DATEC">
               <div class="portfolio-info">
                 <h4>DATEC LTDA.</h4>
-                <p>Soporte técnico y configuración de redes</p>
+                <p>Infraestructura de Redes y Telecomunicaciones</p>
+                <button type="button" class="btn btn-sm btn-primary me-2 btn-abrir-modal" data-target="#modalDatec">
+                  Ver Más
+                </button>
+              </div>
+            </div>
+
+            <div class="modal fade" id="modalDatec" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 shadow-lg">
+
+                  <div class="modal-header bg-light border-0 py-4 px-4">
+                    <div>
+                      <h4 class="modal-title fw-bold text-dark mb-0">DATEC LTDA.</h4>
+                      <div class="d-flex align-items-center mt-1">
+                        <span class="badge bg-primary-soft text-primary me-2">Networks & Telecom Assistant</span>
+                        <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>La Paz - Bolivia</small>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body p-4">
+                    <p class="lead text-secondary mb-4">
+                      Soporte técnico especializado y configuración de infraestructura de red para las instituciones
+                      financieras y gubernamentales más importantes del país.
+                    </p>
+
+                    <div class="row g-4">
+                      <div class="col-md-6">
+                        <h6 class="text-uppercase fw-bold text-primary small mb-3">Responsabilidades Técnicas</h6>
+                        <ul class="list-unstyled custom-list">
+                          <li>Configuración de <strong>Firewalls, Routers y Switches</strong>.</li>
+                          <li>Diseño de topologías y simulaciones inalámbricas.</li>
+                          <li>Administración y soporte en sistemas de <strong>Telefonía IP</strong>.</li>
+                          <li>Mantenimiento preventivo y correctivo de hardware de red.</li>
+                          <li>Seguridad perimetral con marcas líderes del mercado.</li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-6">
+                        <h6 class="text-uppercase fw-bold text-primary small mb-3">Tecnologías de Red</h6>
+                        <div class="mb-3">
+                          <small class="text-muted d-block mb-2 fw-semibold">Vendors Principales</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">Fortinet</span>
+                            <span class="tag">Cisco</span>
+                            <span class="tag">Palo Alto</span>
+                          </div>
+                        </div>
+
+                        <div class="mb-3">
+                          <small class="text-muted d-block mb-2 fw-semibold">Especialidades</small>
+                          <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">VLANs</span>
+                            <span class="tag">VPN</span>
+                            <span class="tag">VoIP</span>
+                            <span class="tag">Wireless Simulation</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="my-4 opacity-50">
+
+                    <div class="bg-light p-3 rounded-3">
+                      <h6 class="text-uppercase fw-bold text-dark small mb-3"><i
+                          class="bi bi-shield-check me-2"></i>Soporte a Instituciones de Alto Nivel</h6>
+                      <div class="row g-2">
+                        <div class="col-6 col-md-4"><small class="text-secondary">• Banco Central de Bolivia</small>
+                        </div>
+                        <div class="col-6 col-md-4"><small class="text-secondary">• Banco Mercantil Santa Cruz</small>
+                        </div>
+                        <div class="col-6 col-md-4"><small class="text-secondary">• Banco FIE</small></div>
+                        <div class="col-6 col-md-4"><small class="text-secondary">• Banco Sol</small></div>
+                        <div class="col-6 col-md-4"><small class="text-secondary">• Aduana Nacional</small></div>
+                        <div class="col-6 col-md-4"><small class="text-secondary">• KPMG</small></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer border-0 p-4 bg-light">
+                    <button class="btn btn-secondary px-4 shadow-sm" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+
+                </div>
               </div>
             </div>
 
@@ -653,149 +1134,7 @@
 
     </section><!-- /Services Section -->
 
-    <!-- Testimonials Section -->
-    <!--  <section id="testimonials" class="testimonials section">
 
-     
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                          Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                          semper.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Saul Goodman</h3>
-                      <h4>Ceo &amp; Founder</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum
-                          eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim
-                          culpa.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Sara Wilsson</h3>
-                      <h4>Designer</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
-                          duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Jena Karlis</h3>
-                      <h4>Store Owner</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat
-                          minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore
-                          illum veniam.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>John Larson</h3>
-                      <h4>Entrepreneur</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-4.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section> -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -844,8 +1183,8 @@
               <i class="bi bi-linkedin flex-shrink-0"></i>
               <div>
                 <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/in/pablo-alexander-mujica-laime"
-                    target="_blank">Pablo Alexander Mujica Laime | LinkeIn</a></p>
+                <p><a href="https://www.linkedin.com/in/pablo-alexander-mujica-laime" target="_blank">Pablo Alexander
+                    Mujica Laime | LinkeIn</a></p>
               </div>
             </div><!-- End Info Item -->
 
@@ -935,7 +1274,23 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Seleccionamos todos los botones que abren modales
+      const buttons = document.querySelectorAll('.btn-abrir-modal');
 
+      buttons.forEach(button => {
+        button.addEventListener('click', function () {
+          const targetId = this.getAttribute('data-target');
+          const modalElement = document.querySelector(targetId);
+
+          // Inicializamos y mostramos el modal usando la API de Bootstrap
+          const modalInstance = new bootstrap.Modal(modalElement);
+          modalInstance.show();
+        });
+      });
+    });
+  </script>
   <!-- Preloader -->
   <div id="preloader"></div>
 
